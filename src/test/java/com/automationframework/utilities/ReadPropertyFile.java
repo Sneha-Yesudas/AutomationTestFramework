@@ -12,7 +12,7 @@ public class ReadPropertyFile {
 
 	public static String ReadPropertyFile(Env env) {
 
-		File file = new File(System.getProperty("user.dir") + "\\Env\\"+env+".properties");
+		File file = new File(System.getProperty("user.dir") + "//Env//"+env+".properties");
 		FileReader fileReader;
 		Properties properties = null;
 		try {
