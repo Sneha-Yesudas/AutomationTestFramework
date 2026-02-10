@@ -16,8 +16,8 @@ public final class HomePage extends BrowserUtilities {
 		maximize();
 	}
 	
-	public HomePage(Browser browser) {
-		super(browser);		
+	public HomePage(Browser browser,boolean isHeadless) {
+		super(browser,isHeadless);		
      	navigateToUrl(ReadPropertyFile.ReadPropertyFile(Env.QA));
 		maximize();
 	}

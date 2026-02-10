@@ -29,7 +29,7 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		CreateExtentReportUtilities.getExtentTest().log(Status.SKIP, result.getMethod().getMethodName());
+		CreateExtentReportUtilities.getExtentTest().log(Status.SKIP, result.getThrowable().getMessage());
 	}
 
 	@Override
