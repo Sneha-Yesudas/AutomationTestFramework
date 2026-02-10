@@ -26,7 +26,7 @@ public class TestBase {
 					browserName);
 			homePage = new HomePage(lambdadriver);
 		} else {
-			homePage = new HomePage(Browser.valueOf(.toString()), isHeadless);
+			homePage = new HomePage(Browser.valueOf(browserName.toUpperCase()), isHeadless);
 		}
 
 	}

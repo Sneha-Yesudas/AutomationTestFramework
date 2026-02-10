@@ -12,8 +12,8 @@ public final class HomePage extends BrowserUtilities {
 
 	public HomePage(WebDriver driver) {
 		super(driver);		
-     	navigateToUrl(ReadPropertyFile.ReadPropertyFile(Env.QA));
-		maximize();
+//     	navigateToUrl(ReadPropertyFile.ReadPropertyFile(Env.QA));
+//		maximize();
 	}
 	
 	public HomePage(Browser browser,boolean isHeadless) {
