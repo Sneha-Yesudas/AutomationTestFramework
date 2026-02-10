@@ -27,9 +27,9 @@ jobs:
 
         
     - name: Running Test Automation Framework
-      run: mvn test -DbrowserName=CHROME -DisHeadless=true -DisCloudTesting=false -X
+      run: mvn test -X -DbrowserName=CHROME -DisCloudTesting=false -DisHeadless=true
 
-    - name: Upload a Build Artifact
+    - name: Generate Report
       if : always()
       uses: actions/upload-artifact@v6.0.0
       with:
