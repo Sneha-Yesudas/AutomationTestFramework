@@ -28,7 +28,7 @@ public class CloudTestingUtility {
         ltOptions.put("user", "snehamary575");
         ltOptions.put("accessKey", "LT_0wyK2Yun8crQYJcvxTHUovfKVv1KrISz62BZ1PVaFvBcXZK");
         String buildTime = LocalDateTime.now()
-                .format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+                .format(DateTimeFormatter.ofPattern("ddMMyy_hh"));
         ltOptions.put("build", "Selenium 4 -" + buildTime);
         ltOptions.put("name", testName);
         ltOptions.put("platformName", "Windows 10");

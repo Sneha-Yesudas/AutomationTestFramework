@@ -3,6 +3,26 @@
   <groupId>AutomationTestFramework</groupId>
   <artifactId>AutomationTestFramework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <build>
+  <plugins>
+   
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.5.4</version>
+        <configuration>
+          <systemPropertyVariables>
+            <browserName>${browserName}</browserName>
+             <isHeadless>${isHeadless}</isHeadless>
+              <isCloudTesting>${isCloudTesting}</isCloudTesting>
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+    
+</plugins>
+  </build>
+  
   <dependencies>
   
    <dependency>
