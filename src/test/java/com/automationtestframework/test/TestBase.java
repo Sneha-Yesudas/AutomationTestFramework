@@ -19,7 +19,7 @@ public class TestBase {
 
    @Parameters({"browserName","isHeadless","isCloudTesting"})
 	@BeforeMethod
-	public void setup(ITestResult result, String browserName,boolean isHeadless,boolean isCloudTesting) {
+	public void setup(String browserName,boolean isHeadless,boolean isCloudTesting,ITestResult result) {
 		WebDriver lambdadriver;
 		if (isCloudTesting) {
 			lambdadriver = CloudTestingUtility.setupCloudConfiguration(result.getMethod().getMethodName(),
