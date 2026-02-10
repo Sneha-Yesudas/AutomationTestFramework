@@ -17,7 +17,7 @@ import com.automationtestframework.pojo.User;
 public class ExcelReaderUtility {
 
 	public static Iterator<User> ReadExcel() {
-		File file =new File(System.getProperty("user.dir")+"\\testdata\\testdata.xlsx");
+		File file =new File(System.getProperty("user.dir")+"//testdata//testdata.xlsx");
 		XSSFWorkbook xssfWorkbook;
 		XSSFSheet xssfSheet;
 		Iterator<Row> iteratorRow;
