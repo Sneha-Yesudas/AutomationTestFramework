@@ -20,7 +20,7 @@ public class CloudTestingUtility {
 	private static ThreadLocal<DesiredCapabilities>  desiredCapabilitieslocal=new ThreadLocal<DesiredCapabilities>();
 	
 	
-	public static WebDriver setupCloudConfiguration(String testName,Browser browser) {
+	public static WebDriver setupCloudConfiguration(String testName,String browser) {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", browser);
         capabilities.setCapability("browserVersion", "latest");
