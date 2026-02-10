@@ -10,8 +10,8 @@ import com.automationtestframework.constants.Env;
 
 public final class HomePage extends BrowserUtilities {
 
-	public HomePage(WebDriver driver) {
-		super(driver);		
+	public HomePage(WebDriver lambdadriver) {
+		super(lambdadriver);		
 //     	navigateToUrl(ReadPropertyFile.ReadPropertyFile(Env.QA));
 //		maximize();
 	}
