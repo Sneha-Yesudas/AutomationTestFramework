@@ -6,7 +6,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.automationframework.utilities.BrowserUtilities;
-import com.automationframework.utilities.CloudeTestingUtility;
+import com.automationframework.utilities.CloudTestingUtility;
 import com.automationtestframework.constants.Browser;
 import com.automationtestframework.pages.HomePage;
 
@@ -20,7 +20,7 @@ public class TestBase {
 	public void setup(ITestResult result) {
 		WebDriver lambdadriver;
 		if(isCloudTesting) {
-			lambdadriver=CloudeTestingUtility.setupCloudConfiguration(result.getMethod().getMethodName(), Browser.CHROME);
+			lambdadriver=CloudTestingUtility.setupCloudConfiguration(result.getMethod().getMethodName(), Browser.CHROME);
 			homePage=new  HomePage(lambdadriver);
 		}
 		else {
@@ -35,7 +35,7 @@ public class TestBase {
 	public void closeWindow() {
 		
 		if(isCloudTesting) {
-			CloudeTestingUtility.tearDownCloudSession();
+			CloudTestingUtility.tearDownCloudSession();
 		}
 	}
 	

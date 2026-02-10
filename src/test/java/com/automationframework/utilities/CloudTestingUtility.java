@@ -2,6 +2,8 @@ package com.automationframework.utilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,7 +13,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.automationtestframework.constants.Browser;
 
-public class CloudeTestingUtility {
+public class CloudTestingUtility {
 
 	private static final String HUBURL = "https://hub.lambdatest.com/wd/hub";
 	private static ThreadLocal<WebDriver>  driverlocal=new ThreadLocal<WebDriver>();
@@ -25,7 +27,9 @@ public class CloudeTestingUtility {
         Map<String, Object> ltOptions = new HashMap<String, Object>();
         ltOptions.put("user", "snehamary575");
         ltOptions.put("accessKey", "LT_0wyK2Yun8crQYJcvxTHUovfKVv1KrISz62BZ1PVaFvBcXZK");
-        ltOptions.put("build", "Selenium 4");
+        String buildTime = LocalDateTime.now()
+                .format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        ltOptions.put("build", "Selenium 4 -" + buildTime);
         ltOptions.put("name", testName);
         ltOptions.put("platformName", "Windows 10");
         ltOptions.put("seCdp", true);
