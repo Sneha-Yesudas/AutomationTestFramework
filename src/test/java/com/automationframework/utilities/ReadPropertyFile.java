@@ -10,7 +10,7 @@ import com.automationtestframework.constants.Env;
 
 public class ReadPropertyFile {
 
-	public static String ReadPropertyFile(Env env) {
+	public static String ReadPropertyFile(Env env,String propertyName) {
 
 		File file = new File(System.getProperty("user.dir") + "//Env//"+env+".properties");
 		FileReader fileReader;
@@ -29,7 +29,7 @@ public class ReadPropertyFile {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return properties.getProperty("URL");
+		return properties.getProperty(propertyName);
 
 	}
 

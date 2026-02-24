@@ -1,5 +1,7 @@
 package com.automationtestframework.pojo;
 
+import com.google.gson.Gson;
+
 public class User {
 	private String username;
 	private String password;
@@ -23,6 +25,13 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [username=" + username + ", password=" + password + "]";
+	}
+	
+	
+	public String toJson() {
+		Gson g=new Gson();
+		User user =new User(username, password);
+		return g.toJson(user);
 	}
 	
 	

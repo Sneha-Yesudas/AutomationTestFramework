@@ -12,13 +12,13 @@ public final class HomePage extends BrowserUtilities {
 
 	public HomePage(WebDriver lambdadriver) {
 		super(lambdadriver);		
-//     	navigateToUrl(ReadPropertyFile.ReadPropertyFile(Env.QA));
+//     	navigateToUrl(ReadPropertyFile.ReadPropertyFile(Env.QA,''));
 //		maximize();
 	}
 	
 	public HomePage(Browser browser,boolean isHeadless) {
 		super(browser,isHeadless);		
-     	navigateToUrl(ReadPropertyFile.ReadPropertyFile(Env.QA));
+     	navigateToUrl(ReadPropertyFile.ReadPropertyFile(Env.QA,"URL"));
 		maximize();
 	}
 
